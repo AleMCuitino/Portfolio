@@ -14,7 +14,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { grey } from '@mui/material/colors';
 
-const pages = [{name:'Proyectos', url:'/proyectos'}, {name:'CV', url:'/cv'}, {name:'Acerca de mi', url:'/acercademi'}]; // cada uno que sea un objeto
+const pages = [{name:'Proyectos', url:'/proyectos'}, {name:'curriculum', url:'/cv'}, {name:'Sobre mi', url:'/sobremi'}]; // cada uno que sea un objeto
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const color = grey[50];
 
@@ -90,7 +90,8 @@ function ResponsiveAppBar() {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                                <MenuItem key={page.name} onClick={handleCloseNavMenu} component={Link} 
+                                to= {page.url}>
                                     <Typography textAlign="center">{page.name}</Typography>
                                 </MenuItem>
                             ))}
