@@ -1,18 +1,24 @@
 import React from 'react';
 import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { display } from '@mui/system';
 
 const Boarding = () => {
     return (
-        <React.Fragment sx={{
-            width: '100%',
-        }}>
-            <Box sx={{
-                width: '100%',
+        <React.Fragment>
+            <Grid
+            container
+            spacing={0}
+            direction="column"
+            flexDirection="wrap"
+            alignItems="center"
+            justifyContent="center"
+            style={{
+                minHeight: '100vh',
             }}>
-                <div style={{ width: '65%', display: 'flex', flexDirection: 'row-reverse', justifyContent: 'end' }}>
+                <div style={{ width: '55%', display: 'flex', flexDirection: 'row-reverse', justifyContent: 'end' }}>
                     <Typography
                         variant="p"
                         sx={{
@@ -28,7 +34,7 @@ const Boarding = () => {
                         Diseño y Desarrollo Web Front-end
                     </Typography>
                 </div>
-                <div style={{ width: '65%', display: 'flex', justifyContent: 'end' }}>
+                <div style={{ width: '55%', display: 'flex', justifyContent: 'end' }}>
                     <Typography
                         variant="h1"
                         sx={{
@@ -43,7 +49,7 @@ const Boarding = () => {
                         Portfolio
                     </Typography>
                 </div>
-                <div style={{ width: '65%', display: 'flex', justifyContent: 'end' }}>
+                <div style={{ width: '55%', display: 'flex', justifyContent: 'end' }}>
                     <Typography
                         variant="p"
                         sx={{
@@ -60,7 +66,6 @@ const Boarding = () => {
                     >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     </Typography>
-
                     <Box
                         component="img"
                         sx={{
@@ -73,8 +78,7 @@ const Boarding = () => {
                         src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&w=350&dpr=2"
                     />
                 </div>
-            </Box>
-
+        </Grid>
         </React.Fragment >
     )
 }
