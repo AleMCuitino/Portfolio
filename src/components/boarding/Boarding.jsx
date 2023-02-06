@@ -1,9 +1,8 @@
 import React from 'react';
-import Container from '@mui/material/Container';
+import Ale from '../../assets/images/Ale1grey.png';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { display } from '@mui/system';
 
 const Boarding = () => {
     return (
@@ -18,12 +17,11 @@ const Boarding = () => {
             style={{
                 minHeight: '100vh',
             }}>
-                <div style={{ width: '55%', display: 'flex', flexDirection: 'row-reverse', justifyContent: 'end' }}>
+                <div style={{ width: '50%', display: 'flex', flexDirection: 'row-reverse', justifyContent: 'end' }}>
                     <Typography
                         variant="p"
                         sx={{
-                            mt:10,
-                            mb: 5,
+                            mb: 2.5,
                             display: { xs: 'flex', md: 'flex' },
                             fontWeight: 200,
                             fontStyle: 'italic',
@@ -34,11 +32,15 @@ const Boarding = () => {
                         Diseño y Desarrollo Web Front-end
                     </Typography>
                 </div>
-                <div style={{ width: '55%', display: 'flex', justifyContent: 'end' }}>
+                <Box 
+                    sx={{ 
+                        width: '50%', 
+                        display: 'flex', 
+                        justifyContent: 'end' }}>
                     <Typography
                         variant="h1"
                         sx={{
-                            mb:5,
+                            mb:2.5,
                             display: { xs: 'flex', md: 'flex' },
                             justifyItems: 'start',
                             fontSize: 52,
@@ -48,20 +50,27 @@ const Boarding = () => {
                     >
                         Portfolio
                     </Typography>
-                </div>
-                <div style={{ width: '55%', display: 'flex', justifyContent: 'end' }}>
+                </Box>
+                <Box sx={{ 
+                    width: '50%', 
+                    display: 'flex', 
+                    flexDirection: {xs:'column-reverse', sm:'column-reverse', md: 'row', lg:'row', xl:'row'},
+                    justifyContent: 'end', 
+                    alignItems: 'flex-end' }}>
+
                     <Typography
                         variant="p"
                         sx={{
-                            mr: 2,
-                            mt: 10,
+                            mt: { xs: 2, sm: 2, md: 0, lg: 0, xl:0 },
+                            mr: { xs: 0, sm: 0, md: 2, lg: 2, xl:3 },
                             display: { xs: 'flex', md: 'flex' },
-                            height: 233,
+                            height: 250,
                             width: 250,
-                            fontSize: 12,
+                            fontSize: 14,
                             fontWeight: 200,
                             textAlign: 'right',
                             textDecoration: 'none',
+                            alignItems: { xs: 'flex-start', sm: 'flex-start', md: 'flex-end' }
                         }}
                     >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -69,15 +78,16 @@ const Boarding = () => {
                     <Box
                         component="img"
                         sx={{
-                            height: 250,
+                            height: 350,
                             width: 350,
-                            maxHeight: { xs: 150, sm: 180, md: 210 },
-                            maxWidth: { xs: 200, sm: 230, md: 280 },
+                            maxHeight: { xs: 150, sm: 180, md: 250, xl:450 },
+                            maxWidth: { xs: 150, sm: 180, md: 250, xl:450 },
+                            display: { xs: 'flex', md: 'flex' },
                         }}
                         alt="The house from the offer."
-                        src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&w=350&dpr=2"
+                        src={Ale}
                     />
-                </div>
+                </Box>
         </Grid>
         </React.Fragment >
     )
